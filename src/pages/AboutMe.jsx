@@ -28,7 +28,7 @@ const AboutMe = () => {
     },
   ];
   return (
-    <div className="text-white flex flex-col py-5 md:py-10 px-4 md:px-10">
+    <div className="text-white flex flex-col py-5 md:py-10 px-4 md:px-10 page-fade-in">
       <div className="flex-1 flex flex-col items-center justify-center">
         <div className="w-60 rounded-full overflow-hidden shadow-lg">
           <img

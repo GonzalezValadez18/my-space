@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="text-white min-h-screen flex flex-col py-4 px-4 sm:px-10">
+    <div className="text-white min-h-screen flex flex-col py-4 px-4 sm:px-10 page-fade-in">
       {/* Sección principal */}
       <div className="flex-1 flex items-center justify-center px-4 sm:px-6 py-12">
         <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-10">
