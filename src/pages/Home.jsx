@@ -34,7 +34,7 @@ const Home = () => {
 
             <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
               <a
-                href="#contacto"
+                href="#/Contact"
                 className="inline-flex items-center justify-center bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition text-sm sm:text-base text-center"
               >
                 Contáctame

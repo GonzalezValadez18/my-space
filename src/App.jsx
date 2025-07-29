@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";
+import Contact from "./pages/Contact";
+import Projects from "./pages/Projects";
 import DynamicBackground from "./components/DynamicBackground";
 import "./animations.css";
 
@@ -44,6 +46,22 @@ function App() {
           element={
             <DynamicBackground>
               <Experience />
+            </DynamicBackground>
+          }
+        />
+        <Route
+          path="/Contact"
+          element={
+            <DynamicBackground>
+              <Contact />
+            </DynamicBackground>
+          }
+        />
+        <Route
+          path="/Projects"
+          element={
+            <DynamicBackground>
+              <Projects />
             </DynamicBackground>
           }
         />

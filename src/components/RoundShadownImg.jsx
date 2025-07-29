@@ -22,7 +22,7 @@ const RoundShadownImg = ({ logos = [] }) => {
           />
         </a>
       ))}
-      <style>
+      <style> 
         {`
           @keyframes float {
             0% {

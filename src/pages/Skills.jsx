@@ -77,6 +77,14 @@ const techLogos = [
     logo: "/src/assets/logos/logo-github.webp",
     alt: "GitHub",
   },
+  {
+    logo: "/src/assets/logos/logo-wordpress.webp",
+    alt: "WordPress",
+  },
+  {
+    logo: "/src/assets/logos/logo-hubspot.webp",
+    alt: "HubSpot",
+  },
 ];
 
 const tableColumns = ["", "", "Nivel de dominio", "Habilidades"];
@@ -111,6 +119,14 @@ const tableRows = [
 const Skills = () => {
   return (
     <div className="text-white  flex flex-col py-4 px-4 sm:px-10 page-fade-in">
+      <div className="m-1 md:m-10 px-2">
+        <h2
+          className="text-4xl text-sky-400 text-center"
+          style={{ filter: "drop-shadow(0 0 15px #ffffff)" }}
+        >
+          Mis Habilidades
+        </h2>
+      </div>
       <div className="flex-1 flex flex-col items-center justify-center">
         <div className="m-1 md:m-10 px-2">
           <h2 className="text-4xl  text-center">
