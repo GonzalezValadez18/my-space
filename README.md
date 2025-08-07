@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# My Space - Portafolio Personal de Jose Leonardo Gonzalez Valadez
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es mi portafolio personal, un espacio digital donde muestro mis proyectos, habilidades y pasión por el desarrollo web y de aplicaciones. Creado con tecnologías modernas para ofrecer una experiencia de usuario fluida e interactiva.
 
-## Available Scripts
+**[Ver Demo en Vivo](https://my-space-kzvt.vercel.app/)**
 
-In the project directory, you can run:
+![Captura de pantalla del Portafolio](https://my-space-kzvt.vercel.app/og-image.jpg)
 
-### `npm start`
+## ✨ Características Principales
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🎨 **Diseño Moderno y Responsivo:** Interfaz limpia y adaptable a cualquier dispositivo, desde móviles hasta ordenadores de escritorio.
+- 🎬 **Tarjetas de Proyecto Interactivas:** Previsualización de videos al pasar el cursor (escritorio) o al tocar (móvil) para una demostración dinámica de los proyectos.
+- 🚀 **Optimización de Rendimiento:** Uso de `Intersection Observer` para reproducir videos solo cuando son visibles, mejorando la performance.
+- ✉️ **Formulario de Contacto Funcional:** Integración con Formspree para una comunicación directa y sencilla.
+- 🧭 **Navegación Fluida:** Rutas manejadas con `react-router-dom` para una experiencia de Single Page Application (SPA) sin recargas.
+- 🔍 **SEO Optimizado:** Meta tags configurados para una mejor visibilidad en motores de búsqueda y redes sociales.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tecnologías Utilizadas
 
-### `npm test`
+- **Framework:** React
+- **Bundler:** Vite
+- **Estilos:** Tailwind CSS
+- **Enrutamiento:** React Router DOM
+- **Formularios:** Formspree
+- **Despliegue:** Vercel
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Cómo Empezar
 
-### `npm run build`
+Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.  **Clona el repositorio:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    git clone https://github.com/tu-usuario/mi-space.git
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2.  **Navega al directorio del proyecto:**
 
-### `npm run eject`
+    ```bash
+    cd mi-space
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3.  **Instala las dependencias:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    npm install
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4.  **Inicia el servidor de desarrollo:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    npm run dev
+    ```
 
-## Learn More
+5.  Abre http://localhost:5173 (o el puerto que indique Vite) en tu navegador.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📜 Scripts Disponibles
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `npm run dev`: Inicia la aplicación en modo de desarrollo con recarga en caliente.
+- `npm run build`: Compila la aplicación para producción en la carpeta `dist`.
+- `npm run preview`: Sirve localmente la compilación de producción para previsualizarla antes del despliegue.
 
-### Code Splitting
+## 🌐 Despliegue
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Este proyecto está configurado para un despliegue continuo en Vercel. Cada `push` a la rama `main` dispara un nuevo despliegue automáticamente.
 
-### Analyzing the Bundle Size
+## 👨‍💻 Contacto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Jose Leonardo Gonzalez Valadez
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **LinkedIn:** Tu Perfil de LinkedIn
+- **GitHub:** Tu Perfil de GitHub
