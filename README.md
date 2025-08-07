@@ -4,7 +4,7 @@ Este es mi portafolio personal, un espacio digital donde muestro mis proyectos, 
 
 **[Ver Demo en Vivo](https://my-space-kzvt.vercel.app/)**
 
-![Captura de pantalla del Portafolio](https://my-space-kzvt.vercel.app/og-image.jpg)
+![Captura de pantalla del Portafolio](https://my-space-kzvt.vercel.app/og-image.png)
 
 ## ✨ Características Principales
 
