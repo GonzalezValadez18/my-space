@@ -10,7 +10,7 @@ const Home = () => {
           {/* Foto de perfil */}
           <div className="w-60 h-60 rounded-full overflow-hidden shadow-lg">
             <img
-              src="/photos/picture-profile.webp"
+              src="/assets/photos/picture-profile.webp"
               alt="José Leonardo González Valadez"
               className="object-cover w-full h-full"
             />
