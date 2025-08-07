@@ -40,7 +40,7 @@ const AboutMe = () => {
       <div className="flex-1 flex flex-col items-center justify-center">
         <div className="w-60 rounded-full overflow-hidden shadow-lg">
           <img
-            src="/src/assets/photos/photo-profile.webp"
+            src="/assets/photos/photo-profile.webp"
             alt="José Leonardo González Valadez"
             className="object-cover w-full"
           />
@@ -65,7 +65,7 @@ const AboutMe = () => {
           </p>
         </div>
         <CardFull
-          imageUrl="/src/assets/logos/logo-education.png"
+          imageUrl="/assets/logos/logo-education.png"
           imageAlt="Formación Académica"
           title="Formación Académica"
           items={educationData}
@@ -80,19 +80,19 @@ const AboutMe = () => {
 
       <div className="flex flex-col md:flex-row mt-5 justify-center items-center gap-5">
         <CardDefinition
-          imageUrl="/src/assets/icons/apps.webp"
+          imageUrl="/assets/icons/apps.webp"
           imageAlt="Desarrollo de Aplicaciones Móviles"
           title="Desarrollo de Aplicaciones"
           description="Creación y Mantenimiento de apps para dispositivos móviles, con diseños modernos responsivos y optimización de rendimiento, tanto del lado del backend como del lado del frontend."
         />
         <CardDefinition
-          imageUrl="/src/assets/icons/web.webp"
+          imageUrl="/assets/icons/web.webp"
           imageAlt="Desarrollo de Páginas Web"
           title="Desarrollo de Páginas Web"
           description="Producción de páginas web modernas, con diseño responsivo y optimización de rendimiento y SEO, tanto del lado del backend como del lado del frontend."
         />
         <CardDefinition
-          imageUrl="/src/assets/icons/software.webp"
+          imageUrl="/assets/icons/software.webp"
           imageAlt="Desarrollo de Software"
           title="Desarrollo de Software"
           description="Elaboración de software interno, con diseño moderno, optimización de rendimiento y manejo de maquinaria o conectividad a dispositivos de impresión."
@@ -106,13 +106,13 @@ const AboutMe = () => {
       </div>
       <div className="flex flex-col md:flex-row mt-5 justify-center items-center gap-5">
         <CardDefinition
-          imageUrl="/src/assets/icons/databases.webp"
+          imageUrl="/assets/icons/databases.webp"
           imageAlt="Gestión de bases de datos"
           title="Gestión de bases de datos"
           description="Manejo y programación en bases de datos relacionales y no relacionales, generación de reportes mediante queries, consultas complejas y manejo total de datos masivos."
         />
         <CardDefinition
-          imageUrl="/src/assets/icons/3d-model.webp"
+          imageUrl="/assets/icons/3d-model.webp"
           imageAlt="Modelado 3D"
           title="Modelado 3D"
           description="Diseño y renderizado de modelos 3D (personajes y entornos) para uso en videojuegos y maquetado de espacios arquitectónicos, de espacios de vivienda y trabajo."

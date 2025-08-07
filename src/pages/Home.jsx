@@ -10,7 +10,7 @@ const Home = () => {
           {/* Foto de perfil */}
           <div className="w-60 h-60 rounded-full overflow-hidden shadow-lg">
             <img
-              src="/src/assets/photos/picture-profile.webp"
+              src="/assets/photos/picture-profile.webp"
               alt="José Leonardo González Valadez"
               className="object-cover w-full h-full"
             />
@@ -55,7 +55,7 @@ const Home = () => {
       {/* Banner inferior */}
       <div className="w-full h-auto md:h-80 flex items-center justify-center">
         <img
-          src="/src/assets/banners/hero-devices.svg"
+          src="/assets/banners/hero-devices.svg"
           alt="Banner principal"
           className="h-full object-contain"
         />

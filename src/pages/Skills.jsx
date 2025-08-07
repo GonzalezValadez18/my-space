@@ -6,83 +6,83 @@ import TableRank from "../components/TableRank";
 
 const techLogos = [
   {
-    logo: "/src/assets/logos/logo-react.webp",
+    logo: "/assets/logos/logo-react.webp",
     alt: "React",
   },
   {
-    logo: "/src/assets/logos/logo-laravel.webp",
+    logo: "/assets/logos/logo-laravel.webp",
     alt: "Laravel",
   },
   {
-    logo: "/src/assets/logos/logo-next.png",
+    logo: "/assets/logos/logo-next.png",
     alt: "Next.js",
   },
   {
-    logo: "/src/assets/logos/logo-node.svg",
+    logo: "/assets/logos/logo-node.svg",
     alt: "Node.js",
   },
   {
-    logo: "/src/assets/logos/logo-android-s.png",
+    logo: "/assets/logos/logo-android-s.png",
     alt: "Android Studio",
   },
   {
-    logo: "/src/assets/logos/logo-tailwind.png",
+    logo: "/assets/logos/logo-tailwind.png",
     alt: "Tailwind CSS",
   },
   {
-    logo: "/src/assets/logos/logo-bootstrap.png",
+    logo: "/assets/logos/logo-bootstrap.png",
     alt: "Bootstrap",
   },
   {
-    logo: "/src/assets/logos/logo-php.webp",
+    logo: "/assets/logos/logo-php.webp",
     alt: "PHP",
   },
   {
-    logo: "/src/assets/logos/logo-java.webp",
+    logo: "/assets/logos/logo-java.webp",
     alt: "Java",
   },
   {
-    logo: "/src/assets/logos/logo-js.webp",
+    logo: "/assets/logos/logo-js.webp",
     alt: "JavaScript",
   },
   {
-    logo: "/src/assets/logos/logo-sqlserver.webp",
+    logo: "/assets/logos/logo-sqlserver.webp",
     alt: "SQL Server",
   },
   {
-    logo: "/src/assets/logos/logo-mysql.webp",
+    logo: "/assets/logos/logo-mysql.webp",
     alt: "MySQL",
   },
   {
-    logo: "/src/assets/logos/logo-postgresql.webp",
+    logo: "/assets/logos/logo-postgresql.webp",
     alt: "PostgreSQL",
   },
   {
-    logo: "/src/assets/logos/logo-oracle.webp",
+    logo: "/assets/logos/logo-oracle.webp",
     alt: "Oracle",
   },
   {
-    logo: "/src/assets/logos/logo-autocad.webp",
+    logo: "/assets/logos/logo-autocad.webp",
     alt: "AutoCAD",
   },
   {
-    logo: "/src/assets/logos/logo-blender.webp",
+    logo: "/assets/logos/logo-blender.webp",
     alt: "Blender",
   },
   {
-    logo: "/src/assets/logos/logo-c++.webp",
+    logo: "/assets/logos/logo-c++.webp",
     alt: "C++",
   },
   {
-    logo: "/src/assets/logos/logo-github.webp",
+    logo: "/assets/logos/logo-github.webp",
     alt: "GitHub",
   },
   {
-    logo: "/src/assets/logos/logo-wordpress.webp",
+    logo: "/assets/logos/logo-wordpress.webp",
     alt: "WordPress",
   },
   {
-    logo: "/src/assets/logos/logo-hubspot.webp",
+    logo: "/assets/logos/logo-hubspot.webp",
     alt: "HubSpot",
   },
 ];
@@ -91,25 +91,25 @@ const tableColumns = ["", "", "Nivel de dominio", "Habilidades"];
 
 const tableRows = [
   {
-    logo: "/src/assets/logos/logo-word.webp",
+    logo: "/assets/logos/logo-word.webp",
     alt: "Microsoft Word",
     tipo: "Experto",
     area: "Creación de documentos profesionales, formato avanzado, uso de estilos, referencias cruzadas, combinación de correspondencia, y plantillas personalizadas",
   },
   {
-    logo: "/src/assets/logos/logo-excel.webp",
+    logo: "/assets/logos/logo-excel.webp",
     alt: "Microsoft Excel",
     tipo: "Experto",
     area: "Gestión de datos, fórmulas complejas, tablas dinámicas, gráficos, macros con VBA, y automatización de procesos",
   },
   {
-    logo: "/src/assets/logos/logo-pp.webp",
+    logo: "/assets/logos/logo-pp.webp",
     alt: "Microsoft PowerPoint",
     tipo: "Avanzado",
     area: "Diseño de presentaciones profesionales, animaciones y transiciones, uso de temas y plantillas, integración de multimedia, y storytelling visual",
   },
   {
-    logo: "/src/assets/logos/logo-access.webp",
+    logo: "/assets/logos/logo-access.webp",
     alt: "Microsoft Access",
     tipo: "Avanzado",
     area: "Diseño de bases de datos, relaciones entre tablas, consultas SQL, formularios interactivos, y generación de informes",
@@ -136,7 +136,7 @@ const Skills = () => {
       </div>
       <div className="flex flex-col md:flex-row mt-5 justify-center items-center gap-5">
         <CardDefinitionTags
-          imageUrl="/src/assets/logos/logo-php.webp"
+          imageUrl="/assets/logos/logo-php.webp"
           imageAlt="Desarrollo de Aplicaciones Móviles"
           title="Utilizado para desarrollo de apis web"
           description="Lo he utilizado para responder a las peticiones de paginas web
@@ -146,7 +146,7 @@ const Skills = () => {
           tags={["#PHP", "#API Rest", "#Backend"]}
         />
         <CardDefinitionTags
-          imageUrl="/src/assets/logos/logo-java.webp"
+          imageUrl="/assets/logos/logo-java.webp"
           imageAlt="Desarrollo de Páginas Web"
           title="Para software y apps"
           description="Lo use como parte del backend en Android Studio para manejar el
@@ -156,7 +156,7 @@ const Skills = () => {
           tags={["#Java", "#Android", "#Software"]}
         />
         <CardDefinitionTags
-          imageUrl="/src/assets/logos/logo-js.webp"
+          imageUrl="/assets/logos/logo-js.webp"
           imageAlt="Desarrollo de Software"
           title="Para paginas web"
           description="Forma parte del desarrollo de mis aplicaciones web, tanto para el
@@ -171,32 +171,32 @@ const Skills = () => {
       </div>
       <div className="flex flex-col md:flex-row mt-5 justify-center items-center gap-5">
         <CardDefinitionTags
-          imageUrl="/src/assets/logos/logo-sql.png"
+          imageUrl="/assets/logos/logo-sql.png"
           imageAlt="Gestión de Bases de Datos"
           title="Gestión de Bases de Datos"
           description="Diseño, implementación y mantenimiento de bases de datos relacionales utilizando SQL. Optimización de consultas, integridad de datos y eficiencia en el manejo de grandes volúmenes de información para aplicaciones modernas."
           tags={[
-            { src: "/src/assets/logos/logo-sqlserver.webp", alt: "SQLServer" },
-            { src: "/src/assets/logos/logo-mysql.webp", alt: "MySQL" },
+            { src: "/assets/logos/logo-sqlserver.webp", alt: "SQLServer" },
+            { src: "/assets/logos/logo-mysql.webp", alt: "MySQL" },
             {
-              src: "/src/assets/logos/logo-postgresql.webp",
+              src: "/assets/logos/logo-postgresql.webp",
               alt: "PostgreSQL",
             },
             {
-              src: "/src/assets/logos/logo-oracle.webp",
+              src: "/assets/logos/logo-oracle.webp",
               alt: "Oracle",
             },
           ]}
         />
         <CardDefinitionTags
-          imageUrl="/src/assets/logos/logo-model3d.webp"
+          imageUrl="/assets/logos/logo-model3d.webp"
           imageAlt="Modelado 3D y Diseño de Planos"
           title="Modelado 3D y Diseño de Planos"
           description="Creación de modelos tridimensionales y planos detallados para representar estructuras, espacios y componentes arquitectónicos. Uso de herramientas especializadas para visualización, planificación y documentación técnica de proyectos."
           tags={[
-            { src: "/src/assets/logos/logo-sketchup.webp", alt: "SketchUp" },
-            { src: "/src/assets/logos/logo-autocad.webp", alt: "AutoCAD" },
-            { src: "/src/assets/logos/logo-blender.webp", alt: "Blender" },
+            { src: "/assets/logos/logo-sketchup.webp", alt: "SketchUp" },
+            { src: "/assets/logos/logo-autocad.webp", alt: "AutoCAD" },
+            { src: "/assets/logos/logo-blender.webp", alt: "Blender" },
           ]}
         />
       </div>
@@ -221,7 +221,7 @@ const Skills = () => {
           Optimizacion y posicionamiento web
         </h2>
         <img
-          src="/src/assets/logos/logo-seo.webp"
+          src="/assets/logos/logo-seo.webp"
           alt="Portfolio"
           className="m-auto w-full md:w-2/5"
           style={{ filter: "drop-shadow(0 0 10px rgba(0, 0, 0, 0.9))" }}

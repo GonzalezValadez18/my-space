@@ -49,7 +49,7 @@ function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-4" onClick={closeMenu}>
             <img
-              src="/src/assets/logos/logo-brand.webp"
+              src="/assets/logos/logo-brand.webp"
               alt="Logo"
               className="h-12 sm:h-16"
             />
