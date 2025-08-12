@@ -8,7 +8,7 @@ import SectionTitle from "../components/SectionTitle";
 const projectsData = [
   {
     id: 1,
-    imageSrc: "./src/assets/img/project-dyl.webp",
+    imageSrc: "./assets/img/project-dyl.webp",
     altText: "Proyecto Clínica Veterinaria Dyl",
     description:
       "Proyecto Desarrollado para la Clinica Veterinaria Dyl para mostrar los servicios que ofrece, da la posibilidad de agendar una cita via whasapp, muestra la ubicacion y tiene excelente optimizacion SEO. El proyecto fue desarrollado con React y React-Router, para el diseño se utilizo Bootstrap 4, y para la optimizacion de SEO se utilizo Google Tag Manager.",
@@ -22,7 +22,7 @@ const projectsData = [
   },
   {
     id: 2,
-    imageSrc: "./src/assets/img/project-jeg.webp",
+    imageSrc: "./assets/img/project-jeg.webp",
     altText: "Portafolio Personal",
     description:
       "Este es mi portafolio personal, donde muestro mis proyectos y habilidades. Creado con React, Tailwind CSS y Vite. Incluye animaciones y un diseño responsivo.",
@@ -37,7 +37,7 @@ const projectsData = [
   },
   {
     id: 3,
-    imageSrc: "./src/assets/img/project-progela.webp",
+    imageSrc: "./assets/img/project-progela.webp",
     altText: "Proyecto Progela",
     description:
       "Plataforma web para la gestión de inventario y ventas de la empresa Progela. Desarrollado con el stack MERN (MongoDB, Express, React, Node.js).",
