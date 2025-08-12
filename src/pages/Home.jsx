@@ -38,10 +38,10 @@ const projectsData = [
   {
     id: 3,
     imageSrc: "./assets/img/project-progela.webp",
-    altText: "Proyecto Progela",
+    altText: "Proyecto Crm Progela",
     description:
       "Plataforma web para la gestión de inventario y ventas de la empresa Progela. Desarrollado con el stack MERN (MongoDB, Express, React, Node.js).",
-    links: [{ type: "github", url: "#", text: "GitHub (Privado)" }],
+    links: [{ type: "github", url: "#", text: "GitHub" }],
   },
 ];
 

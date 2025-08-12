@@ -48,7 +48,7 @@ function Header() {
       <div className="flex row h-[90%] w-auto items-center gap-5">
         <a href="/" className="flex h-full">
           <img
-            src="./src/assets/photos/picture-profile.webp"
+            src="./assets/photos/picture-profile.webp"
             alt="Jose Leonardo Gonzalez Valadez"
           />
         </a>
