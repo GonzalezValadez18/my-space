@@ -1,136 +1,134 @@
-import { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import throttle from "lodash/throttle";
 
-const navLinks = [
-  { to: "/", text: "Home" },
-  { to: "/about", text: "About Me" },
-  { to: "/projects", text: "Projects" },
-  { to: "/skills", text: "Skills" },
-  { to: "/experience", text: "Experience" },
-  { to: "/contact", text: "Contact" },
-];
+function useVerticalScrollDirection() {
+  const [direction, setDirection] = useState("up");
+  const prevScrollY = useRef(window.scrollY);
 
-function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-
-  // Desactiva scroll cuando el menú móvil está abierto
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "auto";
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isOpen]);
+    const handleScroll = throttle(() => {
+      const currentScrollY = window.scrollY;
 
-  // Detectar scroll para hacer fondo sólido
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
+      if (currentScrollY > prevScrollY.current) {
+        setDirection("down");
+      } else {
+        setDirection("up");
+      }
+
+      prevScrollY.current = currentScrollY;
+    }, 200);
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
-  const activeLinkStyle = {
-    color: "#67e8f9",
-  };
-
-  return (
-    <>
-      <header
-        className={`${
-          !scrolled ? "bg-violet-950" : "bg-violet-950/80 backdrop-blur-sm"
-        } text-white py-2 px-4 sm:px-10 shadow-lg sticky top-0 z-50 transition-colors duration-300`}
-      >
-        <div className="container mx-auto flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-4" onClick={closeMenu}>
-            <img
-              src="/assets/logos/logo-brand.webp"
-              alt="Logo"
-              className="h-12 sm:h-16"
-            />
-            <div className="hidden sm:flex flex-col justify-center">
-              <span className="font-bold text-lg leading-tight">
-                José Leonardo
-              </span>
-              <span className="text-sm leading-tight text-gray-300">
-                González Valadez
-              </span>
-            </div>
-          </Link>
-
-          {/* Navegación Desktop */}
-          <nav className="hidden md:block">
-            <ul className="flex items-center space-x-6">
-              {navLinks.map((link) => (
-                <li key={link.to}>
-                  <NavLink
-                    to={link.to}
-                    className="hover:text-cyan-300 transition-colors duration-200"
-                    style={({ isActive }) =>
-                      isActive ? activeLinkStyle : undefined
-                    }
-                  >
-                    {link.text}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          {/* Botón Hamburguesa */}
-          <button
-            className="md:hidden flex flex-col justify-center items-center w-8 h-8 group z-50"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-            aria-expanded={isOpen}
-          >
-            <span
-              className={`block h-0.5 w-6 bg-cyan-300 rounded transform transition duration-300 ease-in-out
-                ${isOpen ? "rotate-45 translate-y-1.5" : "-translate-y-1"}`}
-            />
-            <span
-              className={`block h-0.5 w-6 bg-cyan-300 rounded my-1 transition-opacity duration-300 ease-in-out
-                ${isOpen ? "opacity-0" : "opacity-100"}`}
-            />
-            <span
-              className={`block h-0.5 w-6 bg-cyan-300 rounded transform transition duration-300 ease-in-out
-                ${isOpen ? "-rotate-45 -translate-y-1.5" : "translate-y-1"}`}
-            />
-          </button>
-        </div>
-
-        {/* Menú Móvil */}
-        <div
-          className={`fixed top-0 right-0 w-full h-screen bg-violet-950/95 backdrop-blur-sm z-40 transition-transform duration-300 ease-in-out
-            ${isOpen ? "translate-x-0" : "translate-x-full"}`}
-        >
-          <nav className="h-full overflow-y-auto flex flex-col justify-center">
-            <ul className="flex flex-col items-center space-y-10 py-20">
-              {navLinks.map((link) => (
-                <li key={link.to}>
-                  <NavLink
-                    to={link.to}
-                    className="text-2xl font-semibold hover:text-cyan-300 transition-colors duration-200"
-                    style={({ isActive }) =>
-                      isActive ? activeLinkStyle : undefined
-                    }
-                    onClick={closeMenu}
-                  >
-                    {link.text}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </header>
-    </>
-  );
+  return direction;
 }
 
+function Header() {
+  //constante del estado del menú en mobiles
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const scrollDirection = useVerticalScrollDirection();
+
+  return (
+    <header
+      className={`
+    fixed top-0 left-0 right-0 z-50
+    flex items-center justify-between
+    w-full h-[70px] lg:h-[100px]
+    px-[20px] lg:px-[300px]
+    bg-purple-950 shadow-lg shadow-indigo-500/50
+    transition-transform duration-300 ease-in-out
+    ${scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"}
+  `}
+    >
+      <div className="flex row h-[90%] w-auto items-center gap-5">
+        <a href="/" className="flex h-full">
+          <img
+            src="./src/assets/photos/picture-profile.webp"
+            alt="Jose Leonardo Gonzalez Valadez"
+          />
+        </a>
+        <h1 className="text-gray-100 text-xl">Jose Leonardo</h1>
+      </div>
+      <ul className="hidden row gap-5 lg:flex ">
+        <li className="text-gray-100 hover:bg-purple-800 p-[10px] rounded-lg transition-all duration-300 ease-in-out">
+          <a href="">Sobre mi</a>
+        </li>
+        <li className="text-gray-100 hover:bg-purple-800 p-[10px] rounded-lg transition-all duration-300 ease-in-out">
+          <a href="">Proyectos</a>
+        </li>
+        <li className="text-gray-100 hover:bg-purple-800 p-[10px] rounded-lg transition-all duration-300 ease-in-out">
+          <a href="">Experiencia</a>
+        </li>
+        <li className="text-gray-100 hover:bg-purple-800 p-[10px] rounded-lg transition-all duration-300 ease-in-out">
+          <a href="">Contactame</a>
+        </li>
+      </ul>
+      <button
+        aria-label="Menú"
+        className="lg:hidden me-2"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <svg
+          width="34"
+          height="34"
+          viewBox="0 0 34 34"
+          fill="none"
+          stroke="white"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line
+            className={`line line1 ${isMenuOpen ? "open" : ""}`}
+            x1="5"
+            y1="9"
+            x2="29"
+            y2="9"
+          />
+          <line
+            className={`line line2 ${isMenuOpen ? "open" : ""}`}
+            x1="5"
+            y1="17"
+            x2="29"
+            y2="17"
+          />
+          <line
+            className={`line line3 ${isMenuOpen ? "open" : ""}`}
+            x1="5"
+            y1="25"
+            x2="29"
+            y2="25"
+          />
+        </svg>
+      </button>
+      <div
+        className={`${
+          isMenuOpen
+            ? "transform translate-x-100"
+            : "transform translate-x-[100%]"
+        } flex lg:hidden absolute top-0 right-0 mt-[70px] w-full h-[100vh] md:w-1/2 bg-purple-950/90 justify-center transition-all duration-500 ease-in-out`}
+      >
+        <ul className="flex-col lg:hidden w-full">
+          <li className="flex text-gray-100 text-2xl active:bg-purple-800 p-[10px] rounded-lg transition-all duration-300 ease-in-out justify-center">
+            <a href="">Sobre mi</a>
+          </li>
+          <li className="flex text-gray-100 text-2xl hover:bg-purple-800 p-[10px] rounded-lg transition-all duration-300 ease-in-out justify-center">
+            <a href="">Proyectos</a>
+          </li>
+          <li className="flex text-gray-100 text-2xl hover:bg-purple-800 p-[10px] rounded-lg transition-all duration-300 ease-in-out justify-center">
+            <a href="">Experiencia</a>
+          </li>
+          <li className="flex text-gray-100 text-2xl hover:bg-purple-800 p-[10px] rounded-lg transition-all duration-300 ease-in-out justify-center">
+            <a href="">Contactame</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+  );
+}
 export default Header;

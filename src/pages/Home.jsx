@@ -1,66 +1,64 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Cube from "../components/Cube";
+import CardPhotoText from "../components/CardPhotoText";
+import TextCityNights from "../components/TextCityNights";
+import CardProjects from "../components/CardProjects";
+import SectionTitle from "../components/SectionTitle";
+
+const projectsData = [
+  {
+    id: 1,
+    imageSrc: "./src/assets/img/project-dyl.webp",
+    altText: "Proyecto Clínica Veterinaria Dyl",
+    description:
+      "Proyecto Desarrollado para la Clinica Veterinaria Dyl para mostrar los servicios que ofrece, da la posibilidad de agendar una cita via whasapp, muestra la ubicacion y tiene excelente optimizacion SEO. El proyecto fue desarrollado con React y React-Router, para el diseño se utilizo Bootstrap 4, y para la optimizacion de SEO se utilizo Google Tag Manager.",
+    links: [
+      {
+        type: "live",
+        url: "https://clinicadyl.com/",
+        text: "Ver Demo",
+      },
+    ],
+  },
+  {
+    id: 2,
+    imageSrc: "./src/assets/img/project-jeg.webp",
+    altText: "Portafolio Personal",
+    description:
+      "Este es mi portafolio personal, donde muestro mis proyectos y habilidades. Creado con React, Tailwind CSS y Vite. Incluye animaciones y un diseño responsivo.",
+    links: [
+      {
+        type: "github",
+        url: "https://github.com/GonzalezValadez18/mi-space",
+        text: "GitHub",
+      },
+      { type: "live", url: "https://my-space-kzvt.vercel.app/", text: "Ver Demo" },
+    ],
+  },
+  {
+    id: 3,
+    imageSrc: "./src/assets/img/project-progela.webp",
+    altText: "Proyecto Progela",
+    description:
+      "Plataforma web para la gestión de inventario y ventas de la empresa Progela. Desarrollado con el stack MERN (MongoDB, Express, React, Node.js).",
+    links: [{ type: "github", url: "#", text: "GitHub (Privado)" }],
+  },
+];
+
 
 const Home = () => {
   return (
-    <div className="text-white min-h-screen flex flex-col py-4 px-4 sm:px-10 page-fade-in">
-      {/* Sección principal */}
-      <div className="flex-1 flex items-center justify-center px-4 sm:px-6 py-12">
-        <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-10">
-          {/* Foto de perfil */}
-          <div className="w-60 h-60 rounded-full overflow-hidden shadow-lg">
-            <img
-              src="/assets/photos/picture-profile.webp"
-              alt="José Leonardo González Valadez"
-              className="object-cover w-full h-full"
-            />
-          </div>
+    <section className="w-full h-100">
+      <TextCityNights />
+      <SectionTitle title="Acerca de mi" />
 
-          {/* Texto de bienvenida */}
-          <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
-              ¡Hola! Soy{" "}
-              <span className="text-indigo-400">
-                José Leonardo González Valadez
-              </span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 mb-6">
-              Desarrollador Full Stack con experiencia en desarrollo de páginas
-              web, aplicaciones móviles, modelado 3D y bases de datos.
-              <br />
-              Apasionado por construir soluciones eficientes, limpias y
-              escalables.
-            </p>
+      <CardPhotoText />
+      <SectionTitle title="Proyectos" />
+      <CardProjects projectsData={projectsData} />
+      <SectionTitle title="Experiencia" />
 
-            <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
-              <a
-                href="#/Contact"
-                className="inline-flex items-center justify-center bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition text-sm sm:text-base text-center"
-              >
-                Contáctame
-              </a>
-              <a
-                href="/CV_Jose_Leonardo_Gonzalez_Valadez_2025_jul.pdf"
-                className="inline-flex items-center justify-center border border-indigo-600 text-indigo-400 px-6 py-2 rounded-full hover:bg-indigo-50 transition text-sm sm:text-base text-center"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Descargar CV
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Banner inferior */}
-      <div className="w-full h-auto md:h-80 flex items-center justify-center">
-        <img
-          src="/assets/banners/hero-devices.svg"
-          alt="Banner principal"
-          className="h-full object-contain"
-        />
-      </div>
-    </div>
+      <SectionTitle title="Contactame" />
+    </section>
   );
 };
 

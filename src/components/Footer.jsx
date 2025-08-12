@@ -1,49 +1,55 @@
 function Footer() {
   return (
-    <footer className="bg-violet-950 text-white p-10 flex items-center justify-between shadow-lg">
-      <div className="max-w-6xl mx-auto flex flex-col items-center gap-4 text-center">
-        {/* Redes sociales */}
-        <div className="flex gap-4">
-          <a
-            href="https://github.com/jackmercury"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
-            <img
-              src="/assets/logos/github.svg"
-              alt="GitHub"
-              className="w-10 h-10 hover:opacity-75 transition"
-            />
+    <footer
+      className="flex  flex-col w-full h-auto bg-purple-950 p-[15px]"
+      style={{ boxShadow: "0 -6px 6px -1px rgba(79, 70, 229, 0.6)" }}
+    >
+      <ul className="flex flex-row w-1/2 h-[70%] m-auto p-[15px] justify-center items-center gap-5">
+        <li>
+          <a href="https://www.linkedin.com/in/jos%C3%A9-leonardo-gonzalez-valadez-614502379">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              width="24"
+              height="24"
+              fill="white"
+            >
+              <path d="M100.28 448H7.4V148.9h92.88zm-46.44-340.4a53.79 53.79 0 1 1 53.79-53.79 53.79 53.79 0 0 1-53.79 53.79zM447.9 448h-92.68V302.4c0-34.7-12.44-58.4-43.46-58.4-23.68 0-37.72 15.93-43.94 31.33-2.26 5.5-2.82 13.2-2.82 21V448h-92.68s1.25-259.3 0-286.1h92.68v40.5c12.32-19 34.3-46 83.32-46 60.84 0 106.56 39.8 106.56 125.4z" />
+            </svg>
           </a>
-          <a
-            href="https://linkedin.com/in/jackmercury"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <img
-              src="/assets/logos/facebook.svg"
-              alt="LinkedIn"
-              className="w-10 h-10 hover:opacity-75 transition"
-            />
+        </li>
+        <li>
+          <a href="https://github.com/GonzalezValadez18">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="white"
+            >
+              <path
+                d="M12 0.297c-6.63 0-12 5.373-12 12 0 5.303 
+           3.438 9.8 8.205 11.387 0.6 0.113 0.82-0.258 
+           0.82-0.577 0-0.285-0.01-1.04-0.015-2.04-3.338 
+           0.724-4.042-1.61-4.042-1.61-0.546-1.387-1.333-1.757-1.333-1.757-1.09-0.744 
+           0.083-0.729 0.083-0.729 1.205 0.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 
+           1.305 3.492 0.997 0.108-0.775 0.418-1.305 0.76-1.605-2.665-0.3-5.466-1.335-5.466-5.93 
+           0-1.31 0.465-2.38 1.235-3.22-0.135-0.303-0.54-1.523 0.105-3.176 0 0 1.005-0.322 
+           3.3 1.23a11.49 11.49 0 0 1 3-.405c1.02 0.005 2.045 0.138 3 .405 2.28-1.552 
+           3.285-1.23 3.285-1.23 0.645 1.653 0.24 2.873 0.12 3.176 0.765 0.84 1.23 1.91 
+           1.23 3.22 0 4.61-2.805 5.625-5.475 5.92 0.42 0.36 0.81 1.096 0.81 2.22 0 1.606-0.015 
+           2.896-0.015 3.286 0 0.315 0.21 0.69 0.825 0.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+              />
+            </svg>
           </a>
-          <a href="mailto:jack.mercury@correo.com" aria-label="Correo">
-            <img
-              src="/assets/logos/gmail.svg"
-              alt="Correo"
-              className="w-10 h-10 hover:opacity-75 transition"
-            />
-          </a>
-        </div>
-
-        {/* Firma */}
-        <div className="text-sm">
-          © {new Date().getFullYear()} Jack Mercury. Todos los derechos
-          reservados.
-        </div>
-      </div>
+        </li>
+      </ul>
+      <hr className="w-[90%] m-auto p-[10px]" />
+      <h3 className="m-auto text-white ">
+        @Copyrigth Jose Leonardo Gonzalez Valadez 2025
+      </h3>
     </footer>
   );
 }
+
 export default Footer;
